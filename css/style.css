@@ -4,7 +4,7 @@ width: 100%;
 margin: 0 auto;
 }
 
-#content{
+#align_logo{
 width: 980px;
 margin: 0 auto;
 }
@@ -16,6 +16,7 @@ background-position : bottom;
 width : 455px;
 height : 276px;
 padding-top: 32px;
+padding-left: 51px;
 }
 
 
@@ -30,7 +31,12 @@ margin-top: 35px;}
 float: right;
 background : url("./img/logo.png") no-repeat;
 width: 210px;
-height: 398px;
-margin-top: 143px;
-margin-right: 250px;
+height: 389px;
+margin-top: 149px;
+margin-right: 200px;
 }
+
+#content{
+background: #fff;
+width: 100%;
+height: 500px;}
