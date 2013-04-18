@@ -1,3 +1,6 @@
+@font-face {font-family: futura; 
+			src: url('./FuturaLight.ttf');}
+
 body {
 	width: 100%;
 	margin: 0 auto;
@@ -8,6 +11,7 @@ header{
 	width:100%;
 	margin:0 auto;
 }
+
 #align_logo{
 	width: 980px;
 	margin: 0 auto;
@@ -48,8 +52,11 @@ header{
 }
 
 nav ul li{
+	font-family: futura;
+	font-size: 2em;
 	display:inline;
-}
+	
+	}
 
 a{
 	text-decoration:none;
