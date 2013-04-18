@@ -6,9 +6,15 @@ body {
 	width: 100%;
 	margin: 0 auto;
 }
+
+
+
+/* HEADER
+================================*/
 header{
 	background-image : url("./img/bg.png");
 }
+
 #wrapper{
 	background-image : url("./img/bg.png");
 	width: 980px;
@@ -35,8 +41,6 @@ header{
 	
 }
 
-
-
 #logo {
 	float: right;
 	background : url("./img/logo.png") no-repeat;
@@ -46,9 +50,9 @@ header{
 	margin-right: 204px;
 }
 
-#content{
-	width: 100%;
-}
+
+/* NAV
+================================*/
 nav{
 	text-align: right;
 		background: #fff;
@@ -62,6 +66,21 @@ nav ul li{
 nav ul li:nth-child(1):after,nav ul li:nth-child(2):after{
 	content:" - ";
 }
+
+
+
+/* CONTENT
+================================*/
+
+#content{
+	width: 100%;
+}
+
+
+
+/* MISCELLANEOUS
+================================*/
+
 a{
 	text-decoration:none;
 	color:#000;
