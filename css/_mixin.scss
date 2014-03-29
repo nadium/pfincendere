@@ -1,0 +1,8 @@
+@mixin bloc-size{
+  height: 100%;
+  position: relative;
+}
+
+@mixin fontsize($size) {
+	font-size:($size/16)+em;
+}
