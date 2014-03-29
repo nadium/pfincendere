@@ -15,12 +15,9 @@ body,html,section{
 
 body{
 	background:url('img/bg.jpg') 0 fixed repeat;
-	background-size:100%;
+	background-size:cover;
 }
-.wrapper{
-	margin:0 auto;
-	width: 960px;
-}
+.container{height:100%;}
 #home{
 	padding-top:55px;
 	.info{
@@ -47,6 +44,7 @@ body{
 		
 		li{
 			display: inline-block;
+			text-align: center;
 			a{
 				color:#333;
 				@include fontsize(20);
