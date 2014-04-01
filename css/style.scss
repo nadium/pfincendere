@@ -39,19 +39,23 @@ body{
 	.photo{
 		background:url('img/anx.png') center 0 no-repeat;
 		background-size:97%;
+		bottom:0;
 		height: 100%;
 		position:relative;
 		#circle-guy,#circle-stuff,#circle-cat{
-			display: inline-block;
 			position: absolute;
+		}
+		#circle-guy:hover,#circle-stuff:hover,#circle-cat:hover{
+			cursor:pointer;
 		}
 		#circle-guy{
 			left: 307px;
-			width: 175px;
-			height: 100%;
+			width: 156px;
+			height: 329px;
 			top: 40px;
+			z-index:10;
 		}
-		#circle-guy:hover{
+		#circle-guy:hover,#circle-guy.hover{
 			background: url("img/guy.png") 0 0 no-repeat;
 			background-size: 147px;
 		}
@@ -63,7 +67,7 @@ body{
 			width: 205px;
 			z-index:100;
 		}
-		#circle-stuff:hover{
+		#circle-stuff:hover, #circle-stuff.hover{
 			background: url("img/stuff.png") 0 0 no-repeat;
 			background-size: 156px;
 		}
@@ -75,7 +79,7 @@ body{
 			width: 144px;
 			z-index: 100;
 		}
-		#circle-cat:hover{
+		#circle-cat:hover, #circle-cat.hover{
 			background: url("img/cat.png") 0 0 no-repeat;
 			background-size: 131px;
 		}
@@ -88,7 +92,7 @@ body{
 		height: 300px;
 		position: absolute;
 		width: 100%;
-		
+		z-index:1;
 		li{
 			display: inline-block;
 			padding-top:220px;
@@ -119,5 +123,43 @@ body{
 			background-size: 28%;
 			text-align: left;
 		}
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 959px) {
+	#home nav {
+		height: 460px;
+	}
+	#home nav li{
+		margin-top:120px;
+	}
+	#home nav li:first-child {
+		background-position-x: 166px;
+	}
+	#home nav li:nth-child(2){
+		background-position-x:135px;
+		background-position-y:50px;
+	}
+	#home .photo #circle-guy{
+		height: 310px;
+		left:237px;
+	}
+	#home .photo #circle-stuff{
+		left: 275px;
+		top: 150px;
+		height: 127px;
+		width: 130px;
+	}
+	#home .photo #circle-stuff:hover, #home .photo #circle-stuff.hover{
+		background-size:122px;
+	}
+	#home .photo #circle-cat{
+		left: 420px;
+		top: 158px;
+		height: 180px;
+		width:117px;
+	}
+	#home .photo #circle-cat:hover, #home .photo #circle-cat.hover{
+		background-size:108px;
 	}
 }
