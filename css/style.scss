@@ -16,6 +16,7 @@ body,html,section{
 body{
 	background:url('img/bg.jpg') 0 fixed repeat;
 	background-size:cover;
+	overflow:hidden
 }
 .container{height:100%;}
 #home{
@@ -36,20 +37,87 @@ body{
 		}
 	}
 	.photo{
-		background:url('img/anx.png') 0 0 no-repeat;
-		background-size:100%;
+		background:url('img/anx.png') center 0 no-repeat;
+		background-size:97%;
 		height: 100%;
+		position:relative;
+		#circle-guy,#circle-stuff,#circle-cat{
+			display: inline-block;
+			position: absolute;
+		}
+		#circle-guy{
+			left: 307px;
+			width: 175px;
+			height: 100%;
+			top: 40px;
+		}
+		#circle-guy:hover{
+			background: url("img/guy.png") 0 0 no-repeat;
+			background-size: 147px;
+		}
+
+		#circle-stuff{
+			height: 150px;
+			left: 347px;
+			top: 193px;
+			width: 205px;
+			z-index:100;
+		}
+		#circle-stuff:hover{
+			background: url("img/stuff.png") 0 0 no-repeat;
+			background-size: 156px;
+		}
+
+		#circle-cat{
+			height: 221px;
+			left: 522px;
+			top: 185px;
+			width: 144px;
+			z-index: 100;
+		}
+		#circle-cat:hover{
+			background: url("img/cat.png") 0 0 no-repeat;
+			background-size: 131px;
+		}
+
 	}
 	nav{
+		/*background-color:#fff;*/
+		background: linear-gradient(to bottom, transparent 40%, white 60%);
+		bottom: 0;
+		height: 300px;
+		position: absolute;
+		width: 100%;
 		
 		li{
 			display: inline-block;
+			padding-top:220px;
 			text-align: center;
 			a{
 				color:#333;
-				@include fontsize(20);
+				display: inline-block;
+				@include fontsize(23);
 				text-decoration: none;
+				text-align: center;
+				p:nth-child(2){
+					@include fontsize(9.6);
+					margin-top: 5px;
+				}
 			}
+		}
+		li:first-child{
+			background: url("img/arrow-guy.png") 210px 45px no-repeat;
+			background-size: 28%;
+			text-align: right;
+		}
+		li:nth-child(2){
+			background: url("img/arrow-stuff.png") 163px 75px no-repeat;
+			background-size: 14%;
+		}
+		li:last-child{
+			background: url("img/arrow-cat.png") 0px 75px no-repeat;
+			background-size: 28%;
+			text-align: left;
 		}
 	}
 }
