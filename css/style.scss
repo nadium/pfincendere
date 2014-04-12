@@ -8,19 +8,22 @@
 
 
 body,html,section{
-	font-family:HelveticaLight;
+	font-family:HelveticaLight, Arial;
 	height: 100%;
-	width: 100%
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
 }
 
-body{
+
+.container{height:100%;}
+.main{height:100%;}
+/* HOME
+******************************************/
+#home{
 	background:url('img/bg.jpg') 0 fixed repeat;
 	background-size:cover;
-	overflow:hidden
-}
-.container{height:100%;}
-#home{
-	padding-top:55px;
 	.info{
 		@include fontsize(20);
 		margin-bottom: 15px;
@@ -37,94 +40,120 @@ body{
 		}
 	}
 	.photo{
-		background:url('img/anx.png') center 0 no-repeat;
-		background-size:97%;
+		/*background:url('img/anx3.png') center center no-repeat;*/
+		background-size:75%;
 		bottom:0;
 		height: 100%;
+		padding-top:20px;
 		position:relative;
-		#circle-guy,#circle-stuff,#circle-cat{
-			position: absolute;
-		}
-		#circle-guy:hover,#circle-stuff:hover,#circle-cat:hover{
-			cursor:pointer;
-		}
-		#circle-guy{
-			left: 307px;
-			width: 156px;
-			height: 329px;
-			top: 40px;
-			z-index:10;
-		}
-		#circle-guy:hover,#circle-guy.hover{
-			background: url("img/guy.png") 0 0 no-repeat;
-			background-size: 147px;
-		}
-
-		#circle-stuff{
-			height: 150px;
-			left: 347px;
-			top: 193px;
-			width: 205px;
-			z-index:100;
-		}
-		#circle-stuff:hover, #circle-stuff.hover{
-			background: url("img/stuff.png") 0 0 no-repeat;
-			background-size: 156px;
-		}
-
-		#circle-cat{
-			height: 221px;
-			left: 522px;
-			top: 185px;
-			width: 144px;
-			z-index: 100;
-		}
-		#circle-cat:hover, #circle-cat.hover{
-			background: url("img/cat.png") 0 0 no-repeat;
-			background-size: 131px;
-		}
-
-	}
-	nav{
-		/*background-color:#fff;*/
-		background: linear-gradient(to bottom, transparent 40%, white 60%);
-		bottom: 0;
-		height: 300px;
-		position: absolute;
-		width: 100%;
-		z-index:1;
-		li{
+		text-align: center;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box; 
+		.navigation{
+			height: 476px;
+			width: 100%;
 			display: inline-block;
-			padding-top:220px;
-			text-align: center;
-			a{
-				color:#333;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -50%;
+			margin-top: -238px;
+			
+			img{
+				width:80%;
+			}
+			#circle-guy,#circle-stuff,#circle-cat{
+				position: absolute;
+			}
+			#circle-guy:hover,#circle-stuff:hover,#circle-cat:hover{
+				cursor:pointer;
+			}
+			#circle-guy{
+				left: 307px;
+				width: 156px;
+				height: 329px;
+				top: 40px;
+				z-index:10;
+			}
+			#circle-guy:hover,#circle-guy.hover{
+				background: url("img/guy.png") 0 0 no-repeat;
+				background-size: 147px;
+			}
+
+			#circle-stuff{
+				height: 150px;
+				left: 347px;
+				top: 193px;
+				width: 205px;
+				z-index:100;
+			}
+			#circle-stuff:hover, #circle-stuff.hover{
+				background: url("img/stuff.png") 0 0 no-repeat;
+				background-size: 156px;
+			}
+
+			#circle-cat{
+				height: 221px;
+				left: 522px;
+				top: 185px;
+				width: 144px;
+				z-index: 100;
+			}
+			#circle-cat:hover, #circle-cat.hover{
+				background: url("img/cat.png") 0 0 no-repeat;
+				background-size: 131px;
+			}
+
+		}
+		nav{
+			bottom: 0;
+			width: 100%;
+			z-index:1;
+			li{
 				display: inline-block;
-				@include fontsize(23);
-				text-decoration: none;
 				text-align: center;
-				p:nth-child(2){
-					@include fontsize(9.6);
-					margin-top: 5px;
+				a{
+					color:#333;
+					display: inline-block;
+					@include fontsize(23);
+					text-decoration: none;
+					text-align: center;
+					p:nth-child(2){
+						@include fontsize(9.6);
+						margin-top: 5px;
+					}
 				}
 			}
 		}
-		li:first-child{
-			background: url("img/arrow-guy.png") 210px 45px no-repeat;
-			background-size: 28%;
-			text-align: right;
-		}
-		li:nth-child(2){
-			background: url("img/arrow-stuff.png") 163px 75px no-repeat;
-			background-size: 14%;
-		}
-		li:last-child{
-			background: url("img/arrow-cat.png") 0px 75px no-repeat;
-			background-size: 28%;
-			text-align: left;
-		}
 	}
 }
+
+/* WORK
+******************************************/
+#work{
+	padding-top:55px;
+	position:relative;
+	.section-title{
+		@include fontsize(30);
+		margin-bottom: 3px;
+		padding-left:120px;
+	}
+	hr{
+		background:url("img/line.png") 0 0 no-repeat;
+		background-size:100%;
+		border: 0;
+		height: 2px;
+		margin:0;
+		margin-bottom:5px;
+	}
+	
+}
+
+@media only screen and (min-width: 1400px){
+
+}
+
 
 @media only screen and (min-width: 0px) and (max-width: 959px) {
 	#home nav {

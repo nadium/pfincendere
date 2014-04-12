@@ -58,23 +58,29 @@ table {
 }
 
 body, html, section {
-  font-family: HelveticaLight;
+  font-family: HelveticaLight, Arial;
   height: 100%;
   width: 100%;
-}
-
-body {
-  background: url("img/bg.jpg") 0 fixed repeat;
-  background-size: cover;
-  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 .container {
   height: 100%;
 }
 
+.main {
+  height: 100%;
+}
+
+/* HOME
+******************************************/
 #home {
-  padding-top: 55px;
+  background: url("img/bg.jpg") 0 fixed repeat;
+  background-size: cover;
 }
 #home .info {
   font-size: 1.25em;
@@ -96,89 +102,110 @@ body {
   margin-bottom: 5px;
 }
 #home .photo {
-  background: url("img/anx.png") center 0 no-repeat;
-  background-size: 97%;
+  /*background:url('img/anx3.png') center center no-repeat;*/
+  background-size: 75%;
   bottom: 0;
   height: 100%;
+  padding-top: 20px;
   position: relative;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
-#home .photo #circle-guy, #home .photo #circle-stuff, #home .photo #circle-cat {
+#home .photo .navigation {
+  height: 476px;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50%;
+  margin-top: -238px;
+}
+#home .photo .navigation img {
+  width: 80%;
+}
+#home .photo .navigation #circle-guy, #home .photo .navigation #circle-stuff, #home .photo .navigation #circle-cat {
   position: absolute;
 }
-#home .photo #circle-guy:hover, #home .photo #circle-stuff:hover, #home .photo #circle-cat:hover {
+#home .photo .navigation #circle-guy:hover, #home .photo .navigation #circle-stuff:hover, #home .photo .navigation #circle-cat:hover {
   cursor: pointer;
 }
-#home .photo #circle-guy {
+#home .photo .navigation #circle-guy {
   left: 307px;
   width: 156px;
   height: 329px;
   top: 40px;
   z-index: 10;
 }
-#home .photo #circle-guy:hover, #home .photo #circle-guy.hover {
+#home .photo .navigation #circle-guy:hover, #home .photo .navigation #circle-guy.hover {
   background: url("img/guy.png") 0 0 no-repeat;
   background-size: 147px;
 }
-#home .photo #circle-stuff {
+#home .photo .navigation #circle-stuff {
   height: 150px;
   left: 347px;
   top: 193px;
   width: 205px;
   z-index: 100;
 }
-#home .photo #circle-stuff:hover, #home .photo #circle-stuff.hover {
+#home .photo .navigation #circle-stuff:hover, #home .photo .navigation #circle-stuff.hover {
   background: url("img/stuff.png") 0 0 no-repeat;
   background-size: 156px;
 }
-#home .photo #circle-cat {
+#home .photo .navigation #circle-cat {
   height: 221px;
   left: 522px;
   top: 185px;
   width: 144px;
   z-index: 100;
 }
-#home .photo #circle-cat:hover, #home .photo #circle-cat.hover {
+#home .photo .navigation #circle-cat:hover, #home .photo .navigation #circle-cat.hover {
   background: url("img/cat.png") 0 0 no-repeat;
   background-size: 131px;
 }
-#home nav {
-  /*background-color:#fff;*/
-  background: linear-gradient(to bottom, transparent 40%, white 60%);
+#home .photo nav {
   bottom: 0;
-  height: 300px;
-  position: absolute;
   width: 100%;
   z-index: 1;
 }
-#home nav li {
+#home .photo nav li {
   display: inline-block;
-  padding-top: 220px;
   text-align: center;
 }
-#home nav li a {
+#home .photo nav li a {
   color: #333;
   display: inline-block;
   font-size: 1.4375em;
   text-decoration: none;
   text-align: center;
 }
-#home nav li a p:nth-child(2) {
+#home .photo nav li a p:nth-child(2) {
   font-size: 0.6em;
   margin-top: 5px;
 }
-#home nav li:first-child {
-  background: url("img/arrow-guy.png") 210px 45px no-repeat;
-  background-size: 28%;
-  text-align: right;
+
+/* WORK
+******************************************/
+#work {
+  padding-top: 55px;
+  position: relative;
 }
-#home nav li:nth-child(2) {
-  background: url("img/arrow-stuff.png") 163px 75px no-repeat;
-  background-size: 14%;
+#work .section-title {
+  font-size: 1.875em;
+  margin-bottom: 3px;
+  padding-left: 120px;
 }
-#home nav li:last-child {
-  background: url("img/arrow-cat.png") 0px 75px no-repeat;
-  background-size: 28%;
-  text-align: left;
+#work hr {
+  background: url("img/line.png") 0 0 no-repeat;
+  background-size: 100%;
+  border: 0;
+  height: 2px;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 959px) {

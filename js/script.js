@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	/* MENU HOVER
+	************************************************/
 	$('#menu-guy a').hover(
 		function() {
 			$('#circle-guy').addClass('hover');
@@ -20,4 +22,8 @@ $(document).ready(function() {
 			$('#circle-cat').removeClass('hover');
 		}
 	);
+
+	/* One page Scroll
+	************************************************/
+	$(".main").onepage_scroll();
 });
