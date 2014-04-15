@@ -76,6 +76,18 @@ body, html, section {
   height: 100%;
 }
 
+/*= Screen from 1400px
+=====================================================================================*/
+@media only screen and (min-width: 1400px) {
+  #home .photo {
+    padding-top: 50px;
+  }
+  #home .photo .navigation img {
+    width: 100%;
+  }
+}
+/*= Default screen
+=====================================================================================*/
 /* HOME
 ******************************************/
 #home {
@@ -126,7 +138,7 @@ body, html, section {
   margin-top: -238px;
 }
 #home .photo .navigation img {
-  width: 80%;
+  width: 85%;
 }
 #home .photo .navigation #circle-guy, #home .photo .navigation #circle-stuff, #home .photo .navigation #circle-cat {
   position: absolute;
@@ -186,6 +198,12 @@ body, html, section {
 #home .photo nav li a p:nth-child(2) {
   font-size: 0.6em;
   margin-top: 5px;
+}
+#home .photo nav li:first-child {
+  text-align: right;
+}
+#home .photo nav li:first-child a {
+  text-align: center;
 }
 
 /* WORK
