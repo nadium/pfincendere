@@ -170,7 +170,7 @@ body, html, section {
 }
 #home .photo .navigation #circle-cat {
   height: 221px;
-  left: 522px;
+  left: 535px;
   top: 185px;
   width: 144px;
   z-index: 100;
@@ -188,14 +188,15 @@ body, html, section {
   display: inline-block;
   text-align: center;
 }
-#home .photo nav li a {
+#home .photo nav li > div {
   color: #333;
+  cursor: pointer;
   display: inline-block;
   font-size: 1.4375em;
   text-decoration: none;
   text-align: center;
 }
-#home .photo nav li a p:nth-child(2) {
+#home .photo nav li > div p:nth-child(2) {
   font-size: 0.6em;
   margin-top: 5px;
 }
@@ -209,6 +210,7 @@ body, html, section {
 /* WORK
 ******************************************/
 #work {
+  background: url("img/work-bg.jpg") 0 center repeat-x;
   padding-top: 55px;
   position: relative;
 }
@@ -223,7 +225,64 @@ body, html, section {
   border: 0;
   height: 2px;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
+}
+#work .creation-block {
+  height: 414px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50%;
+  margin-top: -207px;
+}
+#work .creations {
+  display: inline-block;
+  float: left;
+  width: 616px;
+}
+#work .creations .pf-row {
+  height: 198px;
+  margin-bottom: 18px;
+}
+#work .creations .pf-row .creation:first-child {
+  margin-right: 18px;
+}
+#work .creations .creation {
+  border: 1px solid #000;
+  float: left;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+#work .creations .pf-row:first-child {
+  clear: both;
+}
+#work .creations .pf-row:first-child .creation:first-child {
+  background: url("img/pf1.png") 0 0 no-repeat;
+  height: 198px;
+  width: 299px;
+}
+#work .creations .pf-row:first-child .creation:last-child {
+  background: url("img/pf2.png") 0 0 no-repeat;
+  height: 198px;
+  width: 299px;
+}
+#work .creations .pf-row:nth-child(2) .creation:first-child {
+  background: url("img/pf3.png") 0 0 no-repeat;
+  height: 198px;
+  width: 299px;
+}
+#work .creations .pf-row:nth-child(2) .creation:last-child {
+  background: url("img/pf4.png") 0 0 no-repeat;
+  height: 198px;
+  width: 299px;
+}
+#work img {
+  float: left;
+  margin-top: 40px;
+  width: 335px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 959px) {

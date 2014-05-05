@@ -115,7 +115,7 @@ body,html,section{
 
 			#circle-cat{
 				height: 221px;
-				left: 522px;
+				left: 535px;
 				top: 185px;
 				width: 144px;
 				z-index: 100;
@@ -133,8 +133,9 @@ body,html,section{
 			li{
 				display: inline-block;
 				text-align: center;
-				a{
+				> div{
 					color:#333;
+					cursor:pointer;
 					display: inline-block;
 					@include fontsize(23);
 					text-decoration: none;
@@ -158,6 +159,7 @@ body,html,section{
 /* WORK
 ******************************************/
 #work{
+	background:url('img/work-bg.jpg') 0 center repeat-x;
 	padding-top:55px;
 	position:relative;
 	.section-title{
@@ -171,9 +173,63 @@ body,html,section{
 		border: 0;
 		height: 2px;
 		margin:0;
-		margin-bottom:5px;
+		margin-bottom:50px;
 	}
-	
+	.creation-block{
+		height:414px;
+		position:absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -50%;
+		margin-top: -207px;
+	}
+	.creations{
+		display: inline-block;
+		float:left;
+		width:616px;
+		.pf-row{
+			height:198px;
+			margin-bottom:18px;
+			.creation:first-child{margin-right:18px;}
+		}
+		.creation{
+			border:1px solid #000;
+			float:left;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box; 
+		}
+		.pf-row:first-child{
+			clear:both;
+			.creation:first-child{
+				background:url('img/pf1.png') 0 0 no-repeat;
+				height:198px;
+				width:299px;
+			}
+			.creation:last-child{
+				background:url('img/pf2.png') 0 0 no-repeat;
+				height:198px;
+				width:299px;
+			}
+		}
+		.pf-row:nth-child(2){
+			.creation:first-child{
+				background:url('img/pf3.png') 0 0 no-repeat;
+				height:198px;
+				width:299px;
+			}
+			.creation:last-child{
+				background:url('img/pf4.png') 0 0 no-repeat;
+				height:198px;
+				width:299px;
+			}
+		}
+	}
+	img{
+		float:left;
+		margin-top:40px;
+		width:335px;
+	}
 }
 
 

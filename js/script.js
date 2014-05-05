@@ -1,21 +1,21 @@
 $(document).ready(function() {
 	/* MENU HOVER
 	************************************************/
-	$('#menu-guy a').hover(
+	$('#menu-guy div').hover(
 		function() {
 			$('#circle-guy').addClass('hover');
 		},function(){
 			$('#circle-guy').removeClass('hover');
 		}
 	);
-	$('#menu-stuff a').hover(
+	$('#menu-stuff div').hover(
 		function() {
 			$('#circle-stuff').addClass('hover');
 		},function(){
 			$('#circle-stuff').removeClass('hover');
 		}
 	);
-	$('#menu-cat a').hover(
+	$('#menu-cat div').hover(
 		function() {
 			$('#circle-cat').addClass('hover');
 		},function(){
@@ -23,7 +23,21 @@ $(document).ready(function() {
 		}
 	);
 
+
 	/* One page Scroll
 	************************************************/
 	$(".main").onepage_scroll();
+
+	/* MENU Click
+	************************************************/
+	$('#menu-stuff div').click(function() {
+		$(".main").moveDown();
+	});
+	
+	$('#circle-stuff').click(function() {
+		$(".main").moveDown();
+	});
+
+	
+
 });
